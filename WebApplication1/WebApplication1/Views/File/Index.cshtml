@@ -1,0 +1,10 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<form action='@Url.Action("Upload", "File")' method="post" enctype="multipart/form-data">
+    <input type="file" name="file" />Please upload a txt file<br />
+    <input type="submit" value="submit" />
+</form>
