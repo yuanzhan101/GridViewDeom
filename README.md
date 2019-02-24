@@ -1,4 +1,4 @@
-# GridViewDem
+# GridViewDemo
 
 ## Installation
 visual studio 2017, Chrome
@@ -10,4 +10,7 @@ ASP.NET MVC model
 Upload txt file and grid view display
 
 ## Dir
-/File/Index or home's index page
+/File/Index or dir from home's index page
+
+## Sample File
+2.txt
