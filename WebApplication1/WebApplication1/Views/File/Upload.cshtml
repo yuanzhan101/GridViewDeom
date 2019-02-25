@@ -1,4 +1,4 @@
-﻿@model IEnumerable<WebApplication1.Models.FIles>
+﻿@model WebApplication1.Models.FIles
 
 @{
     ViewBag.Title = "Upload";
@@ -6,22 +6,23 @@
 
 <h2>Upload</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
+<div><b>Table Format Data Displaying in ForEach</b><br /></div>
+<table class="table table-bordered table-responsive table-hover">
     <tr>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
+        @foreach(var d in @Model.variables)
+        {
+            <th>@d</th>
+        }
     <tr>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-        </td>
-    </tr>
-}
 
-</table>
+    @foreach (var d in @Model.data)
+    {
+        <tr>
+            @foreach (var dt in @d)
+            {
+                <th>@dt</th>
+            }
+        </tr>
+    }
+
+</table>  
